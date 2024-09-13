@@ -1,12 +1,14 @@
 * {
     box-sizing: border-box;
 }
+
 body {
     overflow-x: hidden;
     margin: 0;
-    background-color: #333;
+    background-color: red;
     color: #222;
 }
+
 .container {
     background-color: #fafafa;
     transform-origin: top left;
@@ -15,21 +17,28 @@ body {
     min-height: 100vh;
     padding: 50px;
 }
+
 .container.show-nav {
     transform: rotate(-20deg);
-} 
+}
+
 .circle-container {
     position: fixed;
     top: -100px;
     left: -100px;
 }
+
 .circle {
-    background-color: #ff7979;
+    background-color: #f57474;
     height: 200px;
     width: 200px;
     border-radius: 50%;
     position: relative;
     transition: transform 0.5s linear;
+}
+
+.container.show-nav .circle {
+    transform: rotate(-70deg);
 }
 
 .circle button {
@@ -43,12 +52,15 @@ body {
     font-size: 26px;
     color: #fff;
 }
+
 .circle button:focus {
     outline: none;
 }
+
 .circle button#open {
     left: 60%;
 }
+
 .circle button#close {
     top: 60%;
     transform: rotate(90deg);
@@ -66,10 +78,12 @@ nav {
     left: 0;
     z-index: 100;
 }
+
 nav ul {
     list-style-type: none;
     padding-left: 30px;
 }
+
 nav ul li {
     text-transform: uppercase;
     color: #fff;
@@ -86,30 +100,36 @@ nav ul li i {
 nav ul li + li {
     margin-left: 15px;
     transform: translateX(-150%);
-
 }
+
 nav ul li + li + li {
     margin-left: 30px;
     transform: translateX(-200%);
-
 }
 
 .content img {
     max-width: 100%;
+    box-shadow: -1px 1px 25px rgba(247, 19, 50, 0.6); 
+    margin: 20px 0;
+
 }
+
 .content {
     max-width: 1000px;
     margin: 50px auto;
 }
+
 .content h1 {
     margin: 0;
+    color: red;
 }
+
 .content small {
     color: #555;
     font-style: italic;
 }
+
 .content p {
     color: #333;
     line-height: 1.5;
 }
-
